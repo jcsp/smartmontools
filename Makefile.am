@@ -896,3 +896,37 @@ $(srcdir)/os_win32/vc10/smartd_res.rc: smartd_res.rc
 	cp $< $@
 
 endif
+
+lib_LIBRARIES = libsmartreport.a
+libsmartreport_a_SOURCES  = \
+        smart_report.cpp \
+        smart_report.h \
+        atacmdnames.cpp \
+        atacmds.cpp \
+        atacmds.h \
+        ataidentify.cpp \
+        ataidentify.h \
+        ataprint.cpp \
+        ataprint.h \
+        dev_ata_cmd_set.cpp \
+        dev_ata_cmd_set.h \
+        dev_interface.cpp \
+        dev_interface.h \
+        dev_tunnelled.h \
+        drivedb.h \
+        int64.h \
+        knowndrives.cpp \
+        knowndrives.h \
+        scsicmds.cpp \
+        scsicmds.h \
+        scsiata.cpp \
+        scsiprint.cpp \
+        scsiprint.h \
+        utility.cpp \
+        utility.h
+
+libsmartreport_a_LIBADD = @os_deps@
+libsmartreport_a_DEPENDENCIES = @os_deps@
+
+include_HEADERS = smart_report.h
+

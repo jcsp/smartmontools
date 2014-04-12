@@ -30,6 +30,7 @@
 #include <stdarg.h>
 #include <stdexcept>
 #include <getopt.h>
+#include <iostream>
 
 #include "config.h"
 
@@ -1226,6 +1227,8 @@ static int main_worker(int argc, char **argv)
   scsi_print_options scsiopts;
   bool print_type_only = false;
   const char * type = parse_options(argc, argv, ataopts, scsiopts, print_type_only);
+
+  std::cout << "type=" << type << std::endl;
 
   const char * name = argv[argc-1];
 

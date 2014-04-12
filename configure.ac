@@ -26,6 +26,7 @@ AC_LANG_CPLUSPLUS
 dnl Checks for programs.
 AC_PROG_CXX
 AM_PROG_AS
+AC_PROG_RANLIB
 AC_PROG_INSTALL
 
 m4_pattern_forbid([^PKG_PROG_])
