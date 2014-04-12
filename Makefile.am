@@ -928,5 +928,6 @@ libsmartreport_a_SOURCES  = \
 libsmartreport_a_LIBADD = @os_deps@
 libsmartreport_a_DEPENDENCIES = @os_deps@
 
-include_HEADERS = smart_report.h
+pkginclude_HEADERS = smart_report.h
+pkglib_LGLIBRARIES = libsmartreport.a
 
